@@ -1,0 +1,9 @@
+az login
+
+az account set --subscription x
+
+az configure --defaults group="x"
+
+az deployment group create --template-file main.bicep --parameters x.json x=x
+
+az deployment group create --template-file main.bicep --parameters x.json x=x --resource-group x
